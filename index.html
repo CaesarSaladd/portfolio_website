@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julio Arantes - Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <nav>
+            <div class="logo">Julio Arantes</div>
+            <ul class="nav-links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <h1>Hi, I'm a Software Developer</h1>
+            <p>I am a developer in progress</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-title">Skills & Technologies</div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS/HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>C</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Tailwind CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Git</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Git</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Git</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-title">Featured Projects</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🚀</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project One</h3>
+                        <p class="project-description">A full-stack web application that helps users manage their daily
+                            tasks with an intuitive interface.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Two</h3>
+                        <p class="project-description">A responsive mobile-first design showcasing modern UI/UX
+                            principles and animations.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎮</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Three</h3>
+                        <p class="project-description">An interactive game built with vanilla JavaScript featuring
+                            smooth animations and sound effects.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Canvas API</span>
+                            <span class="tag">WebGL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="section-title">Let's Connect</div>
+            <p style="opacity: 0.8; font-size: 18px; margin-bottom: 20px; color: #e0e0e0;">
+                I'm always open to new opportunities and collaborations
+            </p>
+            <div class="contact-links">
+                <a href="mailto:jarantesfilho@my.bcit.ca" class="contact-link">
+                    Email
+                </a>
+                <a href="https://github.com/CaesarSaladd" class="contact-link">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/julio-arantes-948584269" class="contact-link">
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© Julio Arantes</p>
+        </footer>
+    </div>
+
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        const numStars = 150;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Generate shooting stars
+        setInterval(() => {
+            const shootingStar = document.createElement('div');
+            shootingStar.className = 'shooting-star';
+            shootingStar.style.width = Math.random() * 100 + 50 + 'px';
+            shootingStar.style.left = Math.random() * 50 + '%';
+            shootingStar.style.top = Math.random() * 50 + '%';
+            starsContainer.appendChild(shootingStar);
+
+            setTimeout(() => {
+                shootingStar.remove();
+            }, 3000);
+        }, 4000);
+
+        // Add parallax effect to cards
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.skill-card, .project-card');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            cards.forEach(card => {
+                const speed = card.classList.contains('skill-card') ? 5 : 10;
+                const xMove = (x - 0.5) * speed;
+                const yMove = (y - 0.5) * speed;
+                card.style.transform = `translate(${xMove}px, ${yMove}px)`;
+            });
+        });
+    </script>
+</body>
+
+</html>

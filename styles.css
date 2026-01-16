@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
@@ -10,57 +11,9 @@ body {
     color: #fff;
     overflow-x: hidden;
     position: relative;
+    cursor: url("https://www.rw-designer.com/cursor-extern.php?id=152330"), auto;
 }
 
-.stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.star {
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    animation: twinkle 3s infinite;
-}
-
-@keyframes twinkle {
-
-    0%,
-    100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-}
-
-.shooting-star {
-    position: absolute;
-    height: 2px;
-    background: linear-gradient(90deg, #fff, transparent);
-    animation: shoot 3s linear infinite;
-}
-
-@keyframes shoot {
-    0% {
-        transform: translateX(0) translateY(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(300px) translateY(300px);
-        opacity: 0;
-    }
-}
 
 .container {
     max-width: 1200px;

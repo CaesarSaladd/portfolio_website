@@ -1,10 +1,26 @@
 @import "tailwindcss";
 
-body {
-    background-image: url(background_portfolio_image.jpg);
+/* body {
+    background-image: url(clouds_png.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+} */
+
+@font-face {
+    font-family: PixelPup;
+    src: url('fonts/NicoClean-Regular.woff') format('woff'),
+        url('fonts/NicoClean-Regular.ttf') format('ttf');
+
 }
+
+@font-face {
+    font-family: PixelBold;
+    src: url('fonts/NicoBold-Regular.woff') format('woff'),
+        url('fonts/NicoBold-Regular.ttf') format('ttf');
+
+}
+
+
 
 #nav-about {
     text-shadow:
@@ -49,4 +65,15 @@ body {
         1px -1px 0 #000,
         -1px 1px 0 #000;
     /* Multiple shadows to cover all sides */
+}
+
+#about {
+    font-family: PixelPup, monospace;
+    /* Ensure font size is a multiple of 8px for this specific font for the best results */
+    font-size: 16px;
+}
+
+#intro {
+    font-family: PixelPup, monospace;
+    /* Ensure font size is a multiple of 8px for this specific font for the best results */
 }

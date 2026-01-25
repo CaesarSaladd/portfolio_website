@@ -7,6 +7,8 @@
     <title>Julio Arantes - CS Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="styles.css" rel="stylesheet">
+
+
 </head>
 
 <body class="min-h-screen">
@@ -30,27 +32,30 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="px-6 py-20 bg-gradient-to-b from-[#87CEEB] to-[#a0e4ff] ">
+    <section id="intro" class="px-6 py-20 bg-[url('mountains.png')] bg-contain ">
         <div class="grid md:grid-cols-2 gap-12 items-center mx-auto max-w-6xl ">
             <div>
                 <div class="inline-block bg-[#f1f1f1] text-black px-4 py-2 rounded-lg mb-4 text-sm font-medium">
                     Computer Science Student
                 </div>
-                <h2 class="text-5xl font-bold text-slate-800 mb-6">Hi, I'm Julio</h2>
-                <p class="text-xl text-slate-600 mb-8">Passionate about building innovative solutions through code.
+                <h2 class="font-sans text-5xl font-bold text-black text-shadow-lg text-shadow-black mb-6">
+                    Hi, I'm Julio</h2>
+                <p class="text-xl text-black mb-8">Passionate about building innovative solutions through code.
                     Currently pursuing my CS degree and exploring the world of software development.</p>
                 <div class="flex gap-4">
                     <a href="#projects"
-                        class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">View My
+                        class="bg-[#21aa58]  border-2 border-black text-white px-6 py-3 rounded-lg hover:bg-[#187030] transition">View
+                        My
                         Work</a>
                     <a href="#contact"
-                        class="border-2 border-slate-300 text-slate-700 px-6 py-3 rounded-lg hover:border-blue-600 hover:text-blue-600 transition">Get
+                        class="bg-[#e4c425] border-2 border-black text-black px-6 py-3 rounded-lg hover:bg-[#a58e19] transition">Get
                         In Touch</a>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4">
-                <div class="bg-blue-600 h-48 rounded-lg"></div>
-                <div class="bg-slate-700 h-48 rounded-lg mt-8"></div>
+                <div class="bg-[url('clouds.jpg')] bg-contain h-48 rounded-lg"></div>
+                <div class="bg-[url('pixel_art_julio.png')] bg-cover bg-center h-48 rounded-lg mt-8">
+                </div>
                 <div class="bg-slate-400 h-48 rounded-lg -mt-8"></div>
                 <div class="bg-blue-400 h-48 rounded-lg"></div>
             </div>
@@ -58,7 +63,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-gradient-to-b from-[#0c7838] to-[#78f66f] py-20">
+    <section id="about" class="bg-gradient-to-b from-[#0f8f42] to-[#78f66f] py-20">
         <div class="max-w-6xl mx-auto px-6">
             <h3 class="text-3xl font-bold text-slate-800 mb-12">About Me</h3>
             <div class="grid md:grid-cols-3 gap-8">
@@ -85,7 +90,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20">
+    <section id="projects" class="py-20 bg-gradient-to-b from-[#e2ca76] to-[#ffe0ab]">
         <div class="max-w-6xl mx-auto px-6">
             <h3 class="text-3xl font-bold text-slate-800 mb-12">Featured Projects</h3>
             <div class="grid md:grid-cols-2 gap-8">
@@ -150,7 +155,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-white py-20">
+    <section id="skills" class="bg-gradient-to-b from-[#76b6c4] to-[#064273] py-20">
         <div class="max-w-6xl mx-auto px-6">
             <h3 class="text-3xl font-bold text-slate-800 mb-12">Technical Skills</h3>
             <div class="grid md:grid-cols-4 gap-6">
